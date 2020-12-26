@@ -30,7 +30,11 @@ export const Form = styled.form<FormProps>`
     border: 2px solid #fff;
     border-right: 0;
 
-    ${(props) => props.hasError && css`border-color:#c53030;`}
+    ${props =>
+      props.hasError &&
+      css`
+        border-color: #c53030;
+      `}
 
     &::placeholder {
       color: #a8a8b3;
@@ -48,7 +52,7 @@ export const Form = styled.form<FormProps>`
     transition: background-color 0.2s;
 
     &:hover {
-     background: ${shade(0.2, '#04d361')}
+      background: ${shade(0.2, '#04d361')};
     }
   }
 `;
@@ -90,7 +94,7 @@ export const Repositories = styled.div`
     }
 
     div {
-      margin:0 16px;
+      margin: 0 16px;
       flex: 1;
 
       strong {
@@ -106,8 +110,8 @@ export const Repositories = styled.div`
     }
 
     svg {
-        margin-left: auto;
-        color: #cbcbd6;
+      margin-left: auto;
+      color: #cbcbd6;
     }
   }
 `;
